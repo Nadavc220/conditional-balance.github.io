@@ -2,6 +2,11 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.video-container iframe {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
 
 .footer .icon-link {
     font-size: 25px;

@@ -247,11 +247,12 @@
 </section> -->
 
 
-<section class="section">
+<section class="hero is-light is-small">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
+        <h2 class="title is-3"></h2>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -264,20 +265,41 @@
             By directing conditional inputs only to these sensitive layers, our approach enables fine-grained control over style and content, significantly reducing issues arising from over-constrained inputs.
             Our findings demonstrate that this method enhances recent stylization techniques by better aligning style and content, ultimately improving the quality of generated visual content.
           </p>
+          <h2 class="title is-3"></h2>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
+    <div class="hero-body"> -->
       <!-- <video id="teaser" autoplay muted loop playsinline height="100%"> -->
-      <video id="teaser" autoplay controls muted playsinline height="100%">
+      <!-- <video id="teaser" autoplay controls muted playsinline height="100%">
         <source src="./static/videos/teaser_vid.mp4"
                 type="video/mp4">
       </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Conditional Balance:</span> An easy to follow video explaining the idea behind our method.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="video-container">
+        <iframe id="teaser" 
+                src="https://www.youtube.com/embed/kcz8J8SvyeE" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen 
+                height="100%" 
+                width="100%">
+        </iframe>
+      </div>
       <h2 class="subtitle has-text-centered">
         <span class="dnerf">Conditional Balance:</span> An easy to follow video explaining the idea behind our method.
       </h2>
@@ -297,8 +319,8 @@
       </div>
     </div> -->
     <!--/ Paper video. -->
-  </div>
-</section>
+  <!-- </div> -->
+<!-- </section> -->
 
 <!-- <div class="container is-max-desktop">
 
@@ -384,12 +406,12 @@
         <div class="container">
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item item-steve">
-              <img src="./static/images/results_0.png"
+              <img src="./static/images/results_all.png"
                     class="interpolation-image"
                     alt="Interpolate start reference image."/>
             </div>
             <div class="item item-chair-tp">
-              <img src="./static/images/results_1.png"
+              <img src="./static/images/results_all.png"
                     class="interpolation-image"
                     alt="Interpolate start reference image."/>
             </div>
@@ -408,6 +430,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <!-- <div class="column is-full-width"> -->
+        <h2 class="title is-3"></h2>
         <h2 class="title is-3">Geometric Style Interpolation ( &#955;<sub>T</sub> )</h2>
 
         <!-- Interpolating. -->
@@ -555,6 +578,7 @@
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <!-- <p>
+            Website source code based on the Nerfies project page. If you want to reuse their source code, please credit them appropriately. 
             This means you are free to borrow the <a
               href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
             we just ask that you link back to this page in the footer.
