@@ -452,7 +452,7 @@
         <div class="content">
           <h2 class="title is-3">Layer Ranking</h2>
           <p>
-            
+            After storing the attention features for each layer at each timestep, we rank the layers by sensitivity at each timestep. The ranking is based on a clustering score that evaluates each layer by the closeness of its features for images sharing the same style (Inner Distance) and the separation of features for images with different styles (Outer Distance).
           </p>
         </div>
       </div>
@@ -463,7 +463,7 @@
         <div class="columns is-centered">
           <div class="column content">
             <p>
-             
+              By analyzing the features for both style and structure aspects, we set &#955;<sub>S</sub> (blue) and &#955;<sub>T</sub> (orange) to determine the ratio of the most sensitive layers to use for conditioning. By directing the conditionals to layers with higher sensitivity to style and content, we enable all conditionals to be utilized effectively without overshadowing one another.
             </p>
           </div>
 
@@ -472,7 +472,6 @@
     </div>
     <img src="./static/images/method_2.png"
                   class="interpolation-image"
-                  style="margin-top: 20px;"
                   alt="Interpolate start reference image."/>
     <div class="columns is-centered" style="margin-top: 20px; margin-bottom:20px;">
   </div>
