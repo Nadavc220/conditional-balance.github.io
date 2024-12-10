@@ -89,8 +89,10 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Conditional Balance:</h1>
-          <h1 class="title is-1 publication-title">Improving Multi-Conditioning Trade-Offs in Image Generation</h1>
+          <h1 class="title is-1 publication-title">
+            Conditional Balance: <br>
+            Improving Multi-Conditioning Trade-Offs in Image Generation
+          </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://www.linkedin.com/in/nadavc220/">Nadav Z. Cohen</a>,</span>
@@ -303,6 +305,8 @@
     </div>
   </div>
 </section>
+
+
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
@@ -394,11 +398,92 @@
     </div>
   </div> -->
 
+  <section class="hero is-light is-small" >
+    <div class="container"> <!-- Added container -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths" style="margin-top: 20px;">
+          <h2 class="title is-2">How Does it Work</h2>
+          <div class="hero-body">
+            <div class="content has-text-justified">
+              <p>
+                Our experiments with current style generation methods reveal that various methods apply style to the output image with varying levels of intensity. Some methods apply excessive style, leading to content loss as the content conditionals are overshadowed, while others apply insufficient style, resulting in weak stylization as the content conditionals dominate the style. We hypothesize that achieving the optimal balance of conditioning for content and style—and directing it to the appropriate parts of the model—can produce a visually satisfying harmony between content and style conditionals. Below, we briefly explain how we detect these sensitivities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- Close container -->
+  </section>
+
 <section class="hero is-light is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Image Collections</h2>
+          <p>
+            We first generate conditional inputs which vary the style aspect we wish to find its sensitive parts in the generation process. To make sure our analysis is clean we solidify all other aspects. In the following examples we solidify the content and structure of the image while varying style.
+          </p>
+        </div>
+      </div>
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">Collection Mapping</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Using the pre-generated conditionals, we generate the collection of images which vary only in the spesific analyzed aspect. While generating the images, we extract the information from the attention layers of the denoising UNet and store them for further analysis.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <img src="./static/images/method_1.png"
+                  class="interpolation-image"
+                  alt="Interpolate start reference image."/>
+    <div class="columns is-centered" style="margin-top: 20px;">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Layer Ranking</h2>
+          <p>
+            
+          </p>
+        </div>
+      </div>
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">Balanced Inference</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+             
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <img src="./static/images/method_2.png"
+                  class="interpolation-image"
+                  style="margin-top: 20px;"
+                  alt="Interpolate start reference image."/>
+    <div class="columns is-centered" style="margin-top: 20px; margin-bottom:20px;">
+  </div>
+</section>
+     
+
+
+<section class="hero is-small">
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
-      <h2 class="title is-3"></h2>
-      <h2 class="title is-3">Balancing Style ( &#955;<sub>S</sub> )</h2>
+      <h2 class="title is-3" style="margin-top: 20px;">Balancing Style ( &#955;<sub>S</sub> )</h2>
       <div class="hero-body">
         <div class="container">
           <div id="results-carousel" class="carousel results-carousel">
@@ -515,16 +600,14 @@
     </div>
   </div> <!-- Close container -->
 </section>
-        
-
+      
 
 <!--/ Applications. -->
-
-<section class="hero is-light is-small">
+<section class="hero is-small">
   <div class="container"> <!-- Added container -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3"></h2>
+        <h2 class="title is-3" style="margin-top: 20px;">Additional Applications</h2>
         <div class="hero-body">
           <div class="content has-text-justified">
             <img src="./static/images/restyle_header.png"
@@ -562,8 +645,8 @@
         </div> -->
         <!--/ Re-rendering. -->
 
-      </div>
-    </div>
+      <!-- </div> -->
+    <!-- </div> -->
     <!--/ Animation. -->
 
 
