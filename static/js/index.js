@@ -1,24 +1,34 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
 // var INTERP_BASE = "./static/interpolation/stacked";
-var INTERP_BASE = "./static/interpolation/monalisa_series";
-var NUM_INTERP_FRAMES = 51;
+var INTERP_BASE0 = "./static/interpolation/camel_series";
+var INTERP_BASE1 = "./static/interpolation/monalisa_series";
+var NUM_INTERP_FRAMES0 = 67;
+var NUM_INTERP_FRAMES1 = 51;
 
-var interp_images = [];
-function preloadInterpolationImages() {
-  for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
-    var path = INTERP_BASE + '/' + String(i).padStart(6, '0') + '.png';
+var interp_images0 = [];
+var interp_images1 = [];
+function preloadInterpolationImages(interp_images, interp_base) {
+  for (var i = 0; i < NUM_INTERP_FRAMES0; i++) {
+    var path = interp_base + '/' + String(i).padStart(6, '0') + '.png';
     // var path = INTERP_BASE + '/' + String(i).padStart(6, '0') + '.jpg';
     interp_images[i] = new Image();
     interp_images[i].src = path;
   }
 }
 
-function setInterpolationImage(i) {
-  var image = interp_images[i];
+function setInterpolationImage0(i, id) {
+  var image = interp_images0[i];
   image.ondragstart = function() { return false; };
   image.oncontextmenu = function() { return false; };
-  $('#interpolation-image-wrapper').empty().append(image);
+  $(id).empty().append(image);
+}
+
+function setInterpolationImage1(i, id) {
+  var image = interp_images1[i];
+  image.ondragstart = function() { return false; };
+  image.oncontextmenu = function() { return false; };
+  $(id).empty().append(image);
 }
 
 
@@ -67,13 +77,24 @@ $(document).ready(function() {
         player.currentTime = player.duration / 100 * this.value;
       })
     }, false);*/
-    preloadInterpolationImages();
+    preloadInterpolationImages(interp_images0, INTERP_BASE0);
+    preloadInterpolationImages(interp_images1, INTERP_BASE1);
 
-    $('#interpolation-slider').on('input', function(event) {
-      setInterpolationImage(this.value);
+    // Style Balancing
+    $('#interpolation-slider0').on('input', function(event) {
+      setInterpolationImage0(this.value, "#interpolation-image-wrapper0");
     });
-    setInterpolationImage(0);
-    $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
+    setInterpolationImage0(30, "#interpolation-image-wrapper0");
+    $('#interpolation-slider0').prop('max', NUM_INTERP_FRAMES0 - 1);
+
+    // Geometric Interpolation
+    $('#interpolation-slider1').on('input', function(event) {
+      setInterpolationImage1(this.value, "#interpolation-image-wrapper1");
+    });
+    setInterpolationImage1(0, "#interpolation-image-wrapper1");
+    $('#interpolation-slider1').prop('max', NUM_INTERP_FRAMES1 - 1);
+
+
 
     bulmaSlider.attach();
 
