@@ -616,9 +616,12 @@
         <div class="hero-body">
           <div class="content has-text-justified">
             <p>
-              We can also animate the scene by interpolating the deformation latent codes of two input
-              frames. Use the slider here to linearly interpolate between the left frame and the right
-              frame.
+              Our experiments showed that using structure-conditioning images, such as Canny and Depth maps, significantly overshadows the effect of the style-conditioning input.
+              More specifically, as the structure-conditioning image imposes geometric information on the generated image, we found that the geometric aspects of a style are affected the most.
+              To address this, we used our analysis method to identify the parts of the diffusion process that are most sensitive to the geometric aspects of an artistic style.
+              Subsequently, we leveraged these layers as indicators of where we should not apply structure conditioning, enabling the model to generate a structure-conditioned image while preserving its geometric style freedom.
+              To achieve this effect, we introduced an interpolation parameter, &#955;<sub>T</sub>, which controls the geometric freedom of the model when conditioned on both a style image and a structure-conditioning image.
+              Using &#955;<sub>T</sub>=0 applies the default conditioning, which enforces a strong structure constraint on the generated image, while increasing &#955;<sub>T</sub> up to &#955;<sub>T</sub>=1 gradually enhances the model's geometric style freedom.
             </p>
           </div>
           <div class="columns is-vcentered interpolation-panel">
