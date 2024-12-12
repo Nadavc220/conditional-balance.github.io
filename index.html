@@ -492,7 +492,8 @@
               To achieve this balance, we introduce an balancing parameter, &#955;<sub>S</sub>, which determines the number of 'style-sensitive' layers utilized for conditioning at each timestep.<br>
               Below, we illustrate the impact of &#955;<sub>S</sub> on the balancing effect. When &#955;<sub>S</sub>=0, relying solely on text stylization, the generated image appears highly realistic.
               At our recommended value of &#955;<sub>S</sub>≈0.4, the output achieves a harmonious balance between content and style.
-              However, as &#955;<sub>S</sub> exceeds 0.5, the style begins to dominate over the content as we use inject style to content sensitive layers, leading to visible artifacts and a noticeable misalignment with the content.
+              However, as &#955;<sub>S</sub> exceeds 0.5, the style begins to dominate over the content as we use inject style to content sensitive layers, leading to visible artifacts and a noticeable misalignment with the content.<br>
+              Notice that after &#955;<sub>S</sub> values above ~0.4 the styilization potential reaches its maximum, and the style stays approximatly constent.
             </p>
           </div>
           <div class="columns is-vcentered interpolation-panel">
@@ -512,7 +513,7 @@
                 </div>
                 <input class="slider is-fullwidth is-large is-info"
                       id="interpolation-slider0"
-                      step="1" min="0" max="100" value="0" type="range">
+                      step="1" min="0" max="100" value="30" type="range">
                 <p>A woman riding on the back of a large camel in a sandy desert. She is wearing a wide straw hat and holding a stick. The surrounding is covered with cactus, in the style of s*.</p>
               </div>
             </div>
