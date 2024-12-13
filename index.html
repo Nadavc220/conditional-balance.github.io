@@ -293,7 +293,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="video-container" style="margin-top: 20px;">
-        <iframe id="teaser" 
+        <iframe id="teaser"
                 src="https://www.youtube.com/embed/kcz8J8SvyeE" 
                 frameborder="0" 
                 allow="autoplay; encrypted-media; fullscreen" 
@@ -423,58 +423,71 @@
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Image Collections</h2>
-          <p>
-            We first generate conditional inputs which vary the style aspect we wish to find its sensitive parts in the generation process. To make sure our analysis is clean we solidify all other aspects. In the following examples we solidify the content and structure of the image while varying style.
-          </p>
+          <div class="hero-body">
+            <h2 class="title is-3">Image Collections</h2>
+            <p>
+              We first generate conditional inputs which vary the style aspect we wish to find its sensitive parts in the generation process. To make sure our analysis is clean we solidify all other aspects. In the following examples we solidify the content and structure of the image while varying style.
+            </p>
+          </div>
         </div>
       </div>
 
       <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">Collection Mapping</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              Using the pre-generated conditionals, we generate the collection of images which vary only in the spesific analyzed aspect. While generating the images, we extract the information from the attention layers of the denoising UNet and store them for further analysis.
-            </p>
+        <div class="hero-body">
+          <h2 class="title is-3">Collection Mapping</h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <p>
+                Using the pre-generated conditionals, we generate the collection of images which vary only in the spesific analyzed aspect. While generating the images, we extract the information from the attention layers of the denoising UNet and store them for further analysis.
+              </p>
+            </div>
           </div>
-
         </div>
       </div>
     </div>
-    <img src="./static/images/method_1.png"
-                  class="interpolation-image"
-                  alt="Interpolate start reference image."/>
-    <div class="columns is-centered" style="margin-top: 20px;">
+    
+    <div class="hero-body">
+      <img src="./static/images/method_1.png"
+                    class="interpolation-image"
+                    alt="Interpolate start reference image."/>
+    </div>
 
+
+    <div class="columns is-centered" style="margin-top: 20px;">
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Layer Ranking</h2>
-          <p>
-            After storing the attention features for each layer at each timestep, we rank the layers by sensitivity at each timestep. The ranking is based on a clustering score that evaluates each layer by the closeness of its features for images sharing the same style (Inner Distance) and the separation of features for images with different styles (Outer Distance).
-          </p>
+          <div class="hero-body">
+            <h2 class="title is-3">Layer Ranking</h2>
+            <p>
+              After storing the attention features for each layer at each timestep, we rank the layers by sensitivity at each timestep. The ranking is based on a clustering score that evaluates each layer by the closeness of its features for images sharing the same style (Inner Distance) and the separation of features for images with different styles (Outer Distance).
+            </p>
+          </div>
         </div>
       </div>
 
       <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">Balanced Inference</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              By analyzing the features for both style and structure aspects, we set &#955;<sub>S</sub> (blue) and &#955;<sub>T</sub> (orange) to determine the ratio of the most sensitive layers to use for conditioning. By directing the conditionals to layers with higher sensitivity to style and content, we enable all conditionals to be utilized effectively without overshadowing one another.
-            </p>
+        <div class="hero-body">
+          <h2 class="title is-3">Balanced Inference</h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <p>
+                By analyzing the features for both style and structure aspects, we set &#955;<sub>S</sub> (blue) and &#955;<sub>T</sub> (orange) to determine the ratio of the most sensitive layers to use for conditioning. By directing the conditionals to layers with higher sensitivity to style and content, we enable all conditionals to be utilized effectively without overshadowing one another.
+              </p>
+            </div>
           </div>
-
         </div>
       </div>
     </div>
-    <img src="./static/images/method_2.png"
-                  class="interpolation-image"
-                  alt="Interpolate start reference image."/>
-    <div class="columns is-centered" style="margin-top: 20px; margin-bottom:20px;">
+
+    <div class="hero-body">
+      <img src="./static/images/method_2.png"
+                    class="interpolation-image"
+                    alt="Interpolate start reference image."/>
+    </div>
+    <!-- <div class="columns is-centered" style="margin-top: 20px; margin-bottom:20px;"> -->
   </div>
 </section>
 
