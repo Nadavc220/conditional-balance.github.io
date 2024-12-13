@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -252,8 +252,7 @@
 <section class="hero is-light is-small">
   <div class="container">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3"></h2>
+      <div class="column is-four-fifths", style="margin-top: 20px;">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -653,6 +652,30 @@
       </div>
     </div>
   </div> <!-- Close container -->
+</section>
+
+<section class="hero is-small is-light">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3" style="margin-top: 20px;">Results</h2>
+      <div class="hero-body">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-steve">
+              <img src="./static/images/depth_res_0.png"
+                    class="interpolation-image"
+                    alt="Interpolate start reference image."/>
+            </div>
+            <div class="item item-chair-tp">
+              <img src="./static/images/canny_res_0.png"
+                    class="interpolation-image"
+                    alt="Interpolate start reference image."/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
       
 
