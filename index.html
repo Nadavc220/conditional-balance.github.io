@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+  <link rel="icon" href="./static/images/cat_icon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -703,7 +703,7 @@
         <h2 class="title is-3" style="margin-top: 40px;">Additional Applications</h2>
         <div class="hero-body">
           <p>
-            In addition to balanced style generation our method can be utilized for other style oriented applications. We present a few ideas in the following secitons.
+            In addition to balanced style generation our method can be utilized for other style oriented applications. We present a few ideas in the following sections.
           </p>
           <!-- <div class="content has-text-justified" style="margin-top: 20px;">
             <img src="./static/images/restyle_header2.png"
@@ -734,10 +734,10 @@
                   alt="Interpolate start reference image."/>
             <p>
               Copying the works of old masters is a time-honored tradition in the art world, dating back to the origins of painting itself. This practice serves as a tool for artists to refine their techniques and develop their unique personal styles.
-              Throughout history, many renowned painters have engaged in this approach—examples include Vincent van Gogh, who copied works by Jean-François Millet, and Pablo Picasso, who reinterpreted works by Diego Velázquez such as Las Meninas.
+              Throughout history, many renowned painters have engaged in this approach - examples include Vincent van Gogh, who copied works by Jean-François Millet, and Pablo Picasso, who reinterpreted works by Diego Velázquez such as Las Meninas.
               This tradition has even given rise to several iconic artworks, such as Edgar Degas' studies of Old Masters like Nicolas Poussin and Rembrandt, or Francis Bacon's reimaginings of Diego Velázquez's Portrait of Pope Innocent X.
-              Inspired by this classical method of artistic learning, we utilize our stylization approach, which enables the application of distinctive styles to the works of old masters — a process we call <i><b>ReStyle</b></i>.
-              Additionally, our method extends the model's geometric flexibility, allowing for the reimagining of an artwork's content in innovative ways—a feature we refer to as <i><b>ReContent</b></i>.
+              Inspired by this classical method of artistic learning, we utilize our stylization approach, which enables the application of distinctive styles to the works of old masters - a process we call <i><b>ReStyle</b></i>.
+              Additionally, our method extends the model's geometric flexibility, allowing for the reimagining of an artwork's content in innovative ways - a feature we refer to as <i><b>ReContent</b></i>.
             </p>
             <div id="results-carousel" class="carousel results-carousel">
               <div class="item item-steve">
@@ -767,6 +767,13 @@
             <img src="./static/images/st_header.png"
                   class="interpolation-image"
                   alt="Interpolate start reference image."/>
+            <p>
+              Style transfer is a well-known technique that applies the artistic style of a given style image to a separate content image.
+              While diffusion models have significantly advanced computer-based artistic generation, they still face challenges in achieving traditional style transfer.
+              This is because diffusion models generate images starting from noise rather than directly modifying a content image, requiring innovative methods for representing style within conditioning techniques rather than relying on direct optimization.
+              In our experiments, we found that integrating our layer selection strategy into existing methods substantially enhances the balance between style and content in style transfer tasks. 
+              Here, we present results using <a href="https://b-lora.github.io/B-LoRA/" style="color:blue; text-decoration:underline;">B-LoRA</a> (Frenkel et al.), with parameters set to λ<sub>S</sub> ≈ 0.57 and λ<sub>T</sub> ≈ 0.85.
+            </p>
             <div id="results-carousel" class="carousel results-carousel">
               <div class="item item-steve">
                 <img src="./static/images/style_transfer1.png"
@@ -784,7 +791,7 @@
     </div>
   </div>
 </section>
-        
+
 
         <!-- Re-rendering. -->
         <!-- <h3 class="title is-4">Re-rendering the input video</h3>
