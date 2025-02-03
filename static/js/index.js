@@ -1,8 +1,8 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
 // var INTERP_BASE = "./static/interpolation/stacked";
-var INTERP_BASE0 = "./static/interpolation/camel_series";
-var INTERP_BASE1 = "./static/interpolation/monalisa_series";
+var INTERP_BASE0 = "./static/interpolation_small/camel_series";
+var INTERP_BASE1 = "./static/interpolation_small/monalisa_series";
 var NUM_INTERP_FRAMES0 = 67;
 var NUM_INTERP_FRAMES1 = 51;
 
