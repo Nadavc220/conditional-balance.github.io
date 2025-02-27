@@ -91,7 +91,7 @@ $(document).ready(function() {
     $('#interpolation-slider1').on('input', function(event) {
       setInterpolationImage1(this.value, "#interpolation-image-wrapper1");
     });
-    setInterpolationImage1(0, "#interpolation-image-wrapper1");
+    setInterpolationImage1(30, "#interpolation-image-wrapper1");
     $('#interpolation-slider1').prop('max', NUM_INTERP_FRAMES1 - 1);
 
 
